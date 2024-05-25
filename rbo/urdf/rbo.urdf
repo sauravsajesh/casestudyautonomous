@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="rbo">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.0502165328285487 2.73738125292911E-05 0.031001700196131"
+        rpy="0 0 0" />
+      <mass
+        value="3.15600508148061" />
+      <inertia
+        ixx="0.0101956910304204"
+        ixy="-8.324620082986E-06"
+        ixz="-0.000407862055256502"
+        iyy="0.0141071441577526"
+        iyz="-1.47426007063046E-06"
+        izz="0.0225589809273961" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rbo/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rbo/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="left_wheel">
+    <inertial>
+      <origin
+        xyz="0.119946222993201 0.117120245509277 0.00492452660000106"
+        rpy="0 0 0" />
+      <mass
+        value="0.015380876049423" />
+      <inertia
+        ixx="6.32585168804471E-06"
+        ixy="-2.99075748651794E-20"
+        ixz="5.29026587161549E-23"
+        iyy="1.06001528693119E-05"
+        iyz="-7.76512072299179E-23"
+        izz="6.32585168804471E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rbo/meshes/left_wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rbo/meshes/left_wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_wheelj"
+    type="continuous">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="left_wheel" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="right_wheel">
+    <inertial>
+      <origin
+        xyz="0.119946222993201 -0.117120245509272 0.00492452660000099"
+        rpy="0 0 0" />
+      <mass
+        value="0.015380876049423" />
+      <inertia
+        ixx="6.32585168804472E-06"
+        ixy="6.98160552508791E-22"
+        ixz="1.71446940671184E-22"
+        iyy="1.06001528693119E-05"
+        iyz="5.17641975462766E-23"
+        izz="6.32585168804472E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rbo/meshes/right_wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rbo/meshes/right_wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_wheelj"
+    type="continuous">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="right_wheel" />
+    <axis
+      xyz="0 -1 0" />
+  </joint>
+</robot>
